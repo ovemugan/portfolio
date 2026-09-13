@@ -1,5 +1,4 @@
 import React from 'react';
-import passportPhoto from '../data/passport_photo.png';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -26,30 +25,14 @@ export const HeroSection: React.FC = () => {
 
       {/* Architectural Two-Column Split */}
       <div className="w-full mt-6 sm:mt-10 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start bg-[#f2eee2] p-5 sm:p-8 md:p-10 shadow-xs border-l-4 border-[#a23e16]">
-        {/* Left Column: Profile Photo + Headline */}
-        <div className="md:col-span-5 flex flex-col sm:flex-row md:flex-col gap-5 sm:gap-6 items-start">
-          {/* Passport Photo */}
-          <div className="shrink-0 relative">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 overflow-hidden border-2 border-black shadow-md">
-              <img
-                src={passportPhoto}
-                alt="Omshakthi Vemuganti"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            {/* Live indicator badge */}
-            <span className="absolute -bottom-1.5 -right-1.5 w-4 h-4 rounded-full bg-[#a23e16] border-2 border-[#f2eee2] animate-pulse"></span>
-          </div>
-
-          {/* Headline */}
-          <div className="flex flex-col justify-center gap-2">
-            <span className="font-mono-code text-[11px] sm:text-xs uppercase tracking-wider text-[#a23e16] font-bold">
-              PROFILE
-            </span>
-            <h2 className="font-display text-lg sm:text-xl md:text-2xl text-black leading-snug font-bold tracking-tight">
-              Full-Stack + AI Developer / Building Practical Intelligence &amp; Shipped Products
-            </h2>
-          </div>
+        {/* Left Column: Headline Statement */}
+        <div className="md:col-span-5 flex flex-col justify-center gap-2">
+          <span className="font-mono-code text-[11px] sm:text-xs uppercase tracking-wider text-[#a23e16] font-bold">
+            PROFILE
+          </span>
+          <h2 className="font-display text-lg sm:text-xl md:text-2xl text-black leading-snug font-bold tracking-tight">
+            Full-Stack + AI Developer / Building Practical Intelligence &amp; Shipped Products
+          </h2>
         </div>
 
         {/* Right Column: Bio & Experience */}
