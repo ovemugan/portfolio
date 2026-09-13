@@ -45,18 +45,14 @@ const OTHER_TOOLS: TechItem[] = [
 interface MarqueeRowProps {
   label: string;
   items: TechItem[];
-  direction: 'left' | 'right';
   badgeColor?: string;
 }
 
 const MarqueeRow: React.FC<MarqueeRowProps> = ({
   label,
   items,
-  direction,
   badgeColor = 'bg-[#1d1c15] text-white border-[#1d1c15]',
 }) => {
-  const animClass = direction === 'left' ? 'animate-marquee-left' : 'animate-marquee-right';
-
   return (
     <div className="flex items-center gap-2 sm:gap-3 py-1.5 overflow-hidden w-full group">
       {/* Category Classification Label */}
@@ -68,11 +64,10 @@ const MarqueeRow: React.FC<MarqueeRowProps> = ({
         </span>
       </div>
 
-      {/* Scrolling Stream */}
+      {/* Scrolling Stream — all rows flow left, 2 copies = seamless loop */}
       <div className="relative w-full overflow-hidden">
-        <div className={`${animClass} flex items-center gap-2.5`}>
-          {/* Repeated for continuous, seamless loop across any screen size */}
-          {[...items, ...items, ...items, ...items].map((tech, index) => (
+        <div className="animate-marquee-left flex items-center gap-2.5">
+          {[...items, ...items].map((tech, index) => (
             <div
               key={`${tech.name}-${index}`}
               className={`flex items-center gap-2 px-3 py-1.5 border transition-colors ${
@@ -117,7 +112,6 @@ export const TechMarquee: React.FC = () => {
       <MarqueeRow
         label="FRONTEND"
         items={FRONTEND_STACK}
-        direction="left"
         badgeColor="bg-black text-white border-black"
       />
 
@@ -125,7 +119,6 @@ export const TechMarquee: React.FC = () => {
       <MarqueeRow
         label="AI & ML"
         items={AI_TOOLS}
-        direction="right"
         badgeColor="bg-[#a23e16] text-white border-[#a23e16]"
       />
 
@@ -133,7 +126,6 @@ export const TechMarquee: React.FC = () => {
       <MarqueeRow
         label="BACKEND"
         items={BACKEND_STACK}
-        direction="left"
         badgeColor="bg-black text-white border-black"
       />
 
@@ -141,7 +133,6 @@ export const TechMarquee: React.FC = () => {
       <MarqueeRow
         label="TOOLS & SYSTEMS"
         items={OTHER_TOOLS}
-        direction="right"
         badgeColor="bg-[#dedace] text-[#1d1c15] border-black/20"
       />
     </section>
