@@ -1,0 +1,207 @@
+import { Project } from '../types';
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'byzlytics',
+    num: '01 // PLATFORM',
+    category: 'WEB APP + LLM',
+    source: 'PRODUCTION PLATFORM',
+    title: 'Byzlytics',
+    summary:
+      'Full-stack business analytics platform for small and medium-scale businesses to simplify inventory, financial, and operational data management.',
+    tags: ['React.js', 'FastAPI', 'MongoDB Atlas', 'Gemini API', 'Groq'],
+    linkText: 'VIEW REPO',
+    linkUrl: 'https://github.com/ovemugan/Byzlytics',
+    liveUrl: 'https://byzlytics.vercel.app',
+    isExternal: true,
+    borderColor: 'border-primary',
+    deepDive: {
+      tagline: 'Predictive inventory reordering and LLM-synthesized operational digests',
+      architecture:
+        'Decoupled frontend built in React consuming asynchronous FastAPI microservices, powered by MongoDB Atlas time-series aggregation, Gemini 2.5 Flash for contextual report summarization, and Groq inference for sub-100ms conversational queries.',
+      highlights: [
+        'Gemini and Groq AI APIs integrated through FastAPI services for automated business insights, inventory analysis, and profit/loss evaluations',
+        'CSV-based inventory management with authentication',
+        'Interactive dashboards with KPI, bar, and line chart visualizations',
+      ],
+      role: 'Lead Full-Stack & AI Architect',
+      period: '2024 – 2025',
+      stackDetails: [
+        { category: 'Frontend', tools: ['React 18', 'Tailwind CSS', 'Recharts', 'Vite'] },
+        { category: 'Backend & APIs', tools: ['FastAPI (Python)', 'Pydantic', 'AsyncIO', 'Uvicorn'] },
+        { category: 'AI Inference', tools: ['Google Gemini API', 'Groq LPU', 'LangChain'] },
+        { category: 'Data Store', tools: ['MongoDB Atlas', 'Redis Cache'] },
+      ],
+      interactiveType: 'analytics',
+    },
+  },
+  {
+    id: 'visioninspect',
+    num: '02 // COMPUTER VISION',
+    category: 'INFOSYS SPRINGBOARD',
+    source: 'INFOSYS SPRINGBOARD',
+    title: 'VisionInspect AI',
+    summary:
+      'Industrial-grade automated surface defect inspection pipeline. Classifies anomalies, scores severity, and outputs structured analytical reports for factory quality assurance.',
+    tags: ['OpenCV', 'Python', 'PyTorch', 'Streamlit'],
+    linkText: 'VIEW REPO',
+    linkUrl: 'https://github.com/GKSJ-Deepvision/VisionInspectAI/tree/Om-Shakthi',
+    isExternal: true,
+    hideWebsiteButton: true,
+    borderColor: 'border-secondary',
+    deepDive: {
+      tagline: 'Real-time computer vision inference for high-speed manufacturing lines',
+      architecture:
+        'Convolutional neural network pipeline trained on surface micro-fracture datasets, integrated with OpenCV morphological contour extraction and a Streamlit inspection HUD for immediate visual verification and defect severity categorization.',
+      highlights: [
+        '96.4% detection precision on micro-fracture and surface scratch benchmarks',
+        'Latency under 38ms per 1080p frame using optimized PyTorch TorchScript weights',
+        'Automated PDF anomaly reporting pipeline with bounding box visualization',
+        'Developed during Infosys Springboard technical qualification with distinction',
+      ],
+      role: 'Computer Vision Engineer (Internship)',
+      period: '2024',
+      stackDetails: [
+        { category: 'CV & Models', tools: ['PyTorch', 'OpenCV', 'TorchVision', 'NumPy'] },
+        { category: 'Interface', tools: ['Streamlit', 'Matplotlib', 'PIL'] },
+        { category: 'Reporting', tools: ['ReportLab', 'Structured JSON Logs'] },
+      ],
+      interactiveType: 'vision',
+    },
+  },
+  {
+    id: 'encephalon',
+    num: '03 // SYSTEMS & OS',
+    category: '20MB FOOTPRINT',
+    source: 'SYSTEMS LAB',
+    title: 'Encephalon OS',
+    summary:
+      'Ultra-lightweight text-user-interface (TUI) custom operating environment engineered for low-specification compute devices. Features isolated process monitoring, shell, and custom file system.',
+    tags: ['Python', 'SQLite', 'Linux Kernel', 'Curses/TUI'],
+    linkText: 'CHECK OS RELEASES',
+    linkUrl: 'https://github.com/ovemugan/Encephalon',
+    liveUrl: 'https://ovemugan.github.io/Encephalon/',
+    isExternal: true,
+    borderColor: 'border-primary',
+    deepDive: {
+      tagline: 'Self-contained 20MB TUI environment built for resilient edge computing',
+      architecture:
+        'Engineered atop a minimal Linux distribution, utilizing Python Curses for zero-overhead graphical windowing, custom POSIX process orchestration, an embedded SQLite state ledger, and an integrated synthetic task monitor.',
+      highlights: [
+        'Complete functional footprint under 20MB RAM utilization at boot',
+        'Custom modular shell commands including sysinfo, memdump, ps, and netprobe',
+        'Resilient against cold resets via write-ahead logging (WAL) on SQLite storage',
+        'Works seamlessly over serial console or headless SSH terminals',
+      ],
+      role: 'Systems Programmer & Kernel Explorer',
+      period: '2024',
+      stackDetails: [
+        { category: 'Core Runtime', tools: ['Python 3.11 Embedded', 'Curses API', 'C Extensions'] },
+        { category: 'Storage', tools: ['SQLite 3 (WAL mode)', 'Virtual Flat FS'] },
+        { category: 'Target System', tools: ['Linux Kernel 5.x', 'POSIX Compliant Stacks'] },
+      ],
+      interactiveType: 'terminal',
+    },
+  },
+  {
+    id: 'nutrimate',
+    num: '04 // HEALTH TECH',
+    category: 'HOSTEL-OPTIMIZED',
+    source: 'CAMPUS UTILITY',
+    title: 'NutriMate',
+    summary:
+      'Calorie tracking web application optimized for hostel life, with offline-first functionality and barcode/product scanning across multiple nutrition APIs.',
+    tags: ['React', 'Tailwind CSS', 'Vite', 'Recharts', 'USDA FoodData Central', 'Open Food Facts'],
+    linkText: 'VIEW REPO',
+    linkUrl: 'https://github.com/ovemugan/nutrimate',
+    liveUrl: 'https://ovemugan.github.io/nutrimate/',
+    isExternal: true,
+    borderColor: 'border-primary',
+    deepDive: {
+      tagline: 'Tailored nutritional intelligence for Indian student hostel ecosystems',
+      architecture:
+        'Client-side responsive progressive web app integrating USDA FoodData Central, Open Food Facts, and Calorie Ninja APIs for food analysis, barcode lookup, caloric deficit computation, and micro-nutrient balance visualizers.',
+      highlights: [
+        'Integrated USDA FoodData Central, Open Food Facts, and Calorie Ninja APIs for food analysis and barcode scanning',
+        'Offline-first with presets, caching workflows, and dark mode support',
+        'Analytics dashboards for calorie tracking, macro visualization, and weight trends via Recharts',
+        'Reusable React component architecture',
+      ],
+      role: 'Full-Stack Developer',
+      period: '2023 – 2024',
+      stackDetails: [
+        { category: 'Frontend', tools: ['React 18', 'Tailwind CSS', 'Vite', 'Lucide React'] },
+        { category: 'Visualization', tools: ['Recharts', 'SVG Canvas'] },
+        { category: 'Data APIs', tools: ['USDA FoodData Central', 'Open Food Facts API', 'Calorie Ninja API'] },
+      ],
+      interactiveType: 'nutrition',
+    },
+  },
+  {
+    id: 'eisenhower',
+    num: '05 // PRODUCTIVITY',
+    category: 'QUADRANT KANBAN',
+    source: 'AGILE PRODUCTIVITY',
+    title: 'Eisenhower Tasks',
+    summary:
+      'Dual-view task management tool allowing instant toggling between urgent-important priority matrices and agile Kanban boards with real-time state synchronization.',
+    tags: ['Next.js', 'TypeScript', 'Firebase', 'Vercel'],
+    linkText: 'VIEW REPO',
+    linkUrl: 'https://github.com/ovemugan/eisenhower-tasks',
+    liveUrl: 'https://eisenhower-tasks-wine.vercel.app',
+    isExternal: true,
+    borderColor: 'border-secondary',
+    deepDive: {
+      tagline: 'Cognitive prioritization bridging matrix triage and execution sprints',
+      architecture:
+        'Next.js 14 serverless architecture leveraging TypeScript interfaces for strict type validation, real-time Firestore listeners for frictionless collaborative board sync, and snappy optimistic UI updates.',
+      highlights: [
+        'Bi-directional state sync between 4 Eisenhower quadrants and 3 Kanban lanes',
+        'Sub-50ms optimistic task creation and status drag transitions',
+        'Automatic archival of resolved goals with velocity scoring',
+        'Deployed with CI/CD pipeline on Vercel Edge runtime',
+      ],
+      role: 'Frontend & Cloud Engineer',
+      period: '2024',
+      stackDetails: [
+        { category: 'Framework', tools: ['Next.js', 'React', 'TypeScript'] },
+        { category: 'Cloud DB', tools: ['Firebase Firestore', 'Firebase Auth'] },
+        { category: 'Styling & Motion', tools: ['Tailwind CSS', 'Framer Motion'] },
+      ],
+      interactiveType: 'kanban',
+    },
+  },
+  {
+    id: 'sccl-network',
+    num: '06 // INFRASTRUCTURE',
+    category: 'INDUSTRIAL TELECOM',
+    source: 'ENTERPRISE INTERNSHIP',
+    title: 'SCCL Enterprise Network',
+    summary:
+      'Hands-on enterprise networking internship at The Singareni Collieries Company Limited. Configured multi-department VLANs, managed IP subnets, and diagnosed optical fiber backbones.',
+    tags: ['Cisco IOS', 'VLANs', 'Fiber Optic', 'Network Security'],
+    linkText: '',
+    linkUrl: '',
+    isExternal: false,
+    borderColor: 'border-primary',
+    deepDive: {
+      tagline: 'Mission-critical mining telecommunications and resilient backbone routing',
+      architecture:
+        'On-premise enterprise infrastructure featuring Cisco Catalyst switches, router clusters, partitioned VLANs isolating administrative offices from operational mine telemetry, and redundant optical fiber rings.',
+      highlights: [
+        'Configured 8 departmental VLANs to enforce zero-trust isolation between mine sensors and business ERP',
+        'Audited and re-spliced multimode optical fiber link terminations across 4 mining yards',
+        'Mitigated broadcast storm risks by tuning Spanning Tree Protocol (STP) parameters',
+        'Authored diagnostic protocol manual adopted by local telecom maintenance team',
+      ],
+      role: 'Network Engineering Intern',
+      period: 'Summer 2024',
+      stackDetails: [
+        { category: 'Hardware', tools: ['Cisco Catalyst 2960/3850', 'Fiber Patch Panels', 'OTDR Testers'] },
+        { category: 'Protocols', tools: ['802.1Q VLANs', 'STP/RSTP', 'OSPF', 'DHCP Snooping'] },
+        { category: 'Analysis', tools: ['Wireshark', 'Cisco Packet Tracer', 'PingPlotter'] },
+      ],
+      interactiveType: 'network',
+    },
+  },
+];
