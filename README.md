@@ -2,6 +2,8 @@
 
 Welcome to my portfolio website! 
 
+https://ovemugan.github.io/portfolio/
+
 This is a static React application built using [Vite](https://vitejs.dev/) and styled with [Tailwind CSS](https://tailwindcss.com/).
 
 ## Running Locally
