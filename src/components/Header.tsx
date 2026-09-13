@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import passportPhoto from '../data/passport_photo.png';
 
 interface HeaderProps {
   onOpenContact: () => void;
   activeSection: string;
 }
 
-/**
- * Profile Picture (DP):
- * Set your image link or local path here (e.g. '/profile.jpg' or 'https://...').
- * If left empty or if loading fails, it automatically displays the clean 'OV' monogram badge.
- */
-export const PROFILE_IMAGE_URL = 'https://github.com/ovemugan/portfolio/blob/main/src/data/passport_photo.png'; 
-
 export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection }) => {
-  const [imageError, setImageError] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const hasImage = Boolean(PROFILE_IMAGE_URL && !imageError);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -81,21 +72,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection }) 
 
           {/* Corner Profile Picture / DP */}
           <div
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 border-2 border-white/20 p-0.5 overflow-hidden flex items-center justify-center shrink-0 shadow-sm"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/20 overflow-hidden flex items-center justify-center shrink-0 shadow-sm"
             title="Omshakthi Vemuganti"
           >
-            {hasImage ? (
-              <img
-                src={PROFILE_IMAGE_URL}
-                alt="Omshakthi Vemuganti"
-                className="w-full h-full object-cover rounded-full"
-                onError={() => setImageError(true)}
-              />
-            ) : (
-              <div className="w-full h-full rounded-full bg-[#a23e16] flex items-center justify-center font-mono-code text-[11px] sm:text-xs text-[#fef9ed] font-bold">
-                OV
-              </div>
-            )}
+            <img
+              src={passportPhoto}
+              alt="Omshakthi Vemuganti"
+              className="w-full h-full object-cover object-top"
+            />
           </div>
 
           {/* Mobile Menu Toggle Button */}
