@@ -11,7 +11,7 @@ interface HeaderProps {
  * Set your image link or local path here (e.g. '/profile.jpg' or 'https://...').
  * If left empty or if loading fails, it automatically displays the clean 'OV' monogram badge.
  */
-export const PROFILE_IMAGE_URL = ''; 
+export const PROFILE_IMAGE_URL = 'https://github.com/ovemugan/portfolio/blob/main/src/data/passport_photo.png'; 
 
 export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection }) => {
   const [imageError, setImageError] = useState(false);
